@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap-3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="fontawesome 5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="fontawesome 5.15.3/css/brands.min.css">
+        <style>
+          body {
+              margin-top: 50px;
+          }
+         
+          #map-container {
+             height: 400px; 
+          }
+          
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" style="color: aliceblue;">
+            <div class="container">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
+                    Menu
+                </button>
+                <a href="index.html" class="navbar-brand">edureka!</a>
+            
+            <div class="navbar-collapse collapse" id="primary-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="signup.html">Signup</a></li>
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+        <div class="Container">
+            <h2> We are here</h2>
+            <div id="map-container">
+            </div>
+            <div class="col-md-12">
+                <h2>Contact Form</h2>  <hr/>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                    <label class="control-label col-md-2" for="name">Name</label>
+                    <div class="col-md-6">
+                    <input type="text" name="name" id="name" class="form-control" 
+                    placeholder="Enter your Name">
+                   </div>
+                    </div>
+
+                    <div class="form-group">
+                       <label class="control-label col-md-2" for="email">email</label>
+                       <div class="col-md-6">
+                       <input type="Email" name="Email" id="Email" class="form-control" 
+                       placeholder="Enter your Email">
+                      </div>
+                       </div>
+
+                       <div class="form-group">
+                           <label class="control-label col-sm-2" for="message" >message</label>
+                           <div class="col-sm-4">
+                           <textarea  rows="4" class="form-control" placeholder="Enter your message"></textarea>
+                          </div>
+                           </div>
+
+                          
+
+                               <div class="form-group">
+                                   <label class="control-label col-md-2" for="checkbox-grp-position">Position</label>
+                                   <div class="col-md-10" id="checkbox-grp-position">
+                                   <label class="checkbox-inline">
+                                       <input type="checkbox" value="web-developer" name="checkbox-position"/>
+                                       Web Developer
+                                       </label>
+                                       <label class="checkbox-inline">
+                                       <input type="checkbox" value="Data Scientist" name="checkbox-position"/>
+                                       Data Scientist
+                                       </label>
+                                       <label class="checkbox-inline">
+                                       <input type="checkbox" value="Sysytem Engineer" name="checkbox-position"/>
+                                       System Engineer
+                                       </label>
+                                       <label class="checkbox-inline">
+                                       <input type="checkbox" value="Automation testing" name="checkbox-position"/>
+                                       Automation testing
+
+                                   </label>
+                                  </div>
+                                   </div>
+                               <div class="form-group">
+                                   <div class="col-md-10 col-md-offset-2">
+                                       <input type="submit" value="Reset" class="btn btn-default"/>
+                                       <input type="submit" value="Submit" class="btn btn-primary"/>
+                                   </div>
+                               </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="text-center" style="margin-top: 20px" >
+            Copyright &copy; 2015 Brain4ce Education Solution Pvt. All rights reserver. 
+            
+            
+            <a data-toggle="modal" href='#modal-tnc'>Terms and Condition</a>
+            <div class="modal fade" id="modal-tnc">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h2 class="modal-title">Terms and Condition</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p> We are a team of tech enthsiast who are determined to make learning easy for everyone 
+                            here at edureka!. We belive in awesome work so we can provide best experice to our users</p>
+                            <p>Learing is meant to be enjoyable activity and we put our best to turn it into that.
+                                So if you think the same come join us.
+                            </p>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.4/js/bootstrap.min.js" ></script> 
+        <script src="https://www.maps.google.com/api/js?sensor=false"></script>
+
+        <script>
+
+             // console.log(google);
+             // console.log(google.maps);
+             function init_map(){
+                var var_location = new google.maps.LatLng(27.1580474,78.003109);
+                var var_mapoptions ={
+                    center: location,
+                     zoom: 17
+                };
+             }
+
+           
+                var marker = new google.maps.Marker({
+                    position: var_location,
+                    "map": var_map,
+                    title: KFC});
+
+                    var var_map = new google.map.Maps(document.getElementById('map-container'),
+                    var_mapoptions),
+                    
+                    var_marker,set,Mapvar_map;
+
+                ;
+                google.map.event.addDomListener(window, 'load', init_map);
+            
+        </script>
+    </body>
+</html>
